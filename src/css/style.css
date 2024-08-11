@@ -135,3 +135,16 @@ html {
 .container-cadastro p {
 	color: #e1e1e1;
 }
+
+@media (min-width: 1024px) {
+	.container-body {
+		background: url(/src/imgs/login-background.png) right top no-repeat;
+		object-fit: cover;
+	}
+
+	.container-main {
+		background: #0f1216;
+		width: 44%;
+		padding: 16px 96px;
+	}
+}
