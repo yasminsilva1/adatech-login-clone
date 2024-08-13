@@ -30,11 +30,11 @@
 	justify-content: center;
 	flex-direction: column;
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
 	padding: 16px;
 	background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)) center
 			center / cover,
-		url(/src/imgs/login-background.png) no-repeat center / cover;
+		url("/src/imgs/login-background.png") center center / cover;
 }
 
 .container-login {
@@ -95,6 +95,7 @@
 }
 
 .btn {
+	font-family: "Lato", sans-serif;
 	font-weight: 400;
 	font-size: 1rem;
 	color: rgb(15, 18, 22);
@@ -129,7 +130,7 @@
 		linear-gradient(to right, rgb(166, 247, 80), rgb(49, 77, 166)) border-box
 			border-box;
 	cursor: pointer;
-	transition: 0.3s ease-in;
+	transition: 0.3s ease-in-out;
 }
 
 .itens:hover {
@@ -154,6 +155,11 @@
 	color: #e1e1e1;
 }
 
+.background-img {
+	display: none;
+	visibility: hidden;
+}
+
 @media (min-width: 640px) {
 	.container-main {
 		padding: 16px 96px;
@@ -162,26 +168,28 @@
 
 @media (min-width: 1024px) {
 	.container-body {
-		background: url(/src/imgs/login-background.png);
-		background-size: contain;
-		background-position: right bottom;
-		background-repeat: no-repeat;
+		display: flex;
+		min-height: 100vh;
 	}
+
+	.background-img {
+		display: block;
+		visibility: visible;
+		flex-grow: 1;
+		background: url(/src/imgs/login-background.png);
+		background-size: cover;
+		background-position: 100% 100%;
+	}
+
+	.logo-absolute {
+		position: absolute;
+		right: 64px;
+		bottom: 64px;
+	}
+
 	.container-main {
 		background-image: none;
 		background-color: #0f1216;
-		width: 59.4%;
-	}
-}
-
-@media (min-width: 1280px) {
-	.container-main {
-		width: 44.8%;
-	}
-}
-
-@media (min-width: 1440px) {
-	.container-main {
-		width: 41.3%;
+		width: auto;
 	}
 }
