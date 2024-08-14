@@ -159,11 +159,6 @@
 .background-img {
 	display: none;
 	visibility: hidden;
-	position: relative;
-	flex-grow: 1;
-	background: url(/src/imgs/login-background.png);
-	background-size: cover;
-	background-position: 100% 100%;
 }
 
 @media (min-width: 640px) {
@@ -190,6 +185,11 @@
 	.background-img {
 		display: block;
 		visibility: visible;
+		position: relative;
+		flex-grow: 1;
+		background: url(/src/imgs/login-background.png);
+		background-size: cover;
+		background-position: right bottom;
 	}
 
 	.logo-absolute {
