@@ -22,14 +22,15 @@
 .container-body {
 	display: flex;
 	width: 100%;
-	height: 100%;
+	min-height: 100vh;
 	font-family: "Lato", sans-serif;
 }
 
 .container-main {
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	min-height: 100vh;
 	padding: 16px;
@@ -120,8 +121,8 @@
 
 .itens {
 	border-radius: 5px;
-	height: 66px;
-	width: 66px;
+	height: 4.125rem; /* 66px */
+	width: 4.125rem; /* 66px */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -141,8 +142,8 @@
 }
 
 .itens a img {
-	width: 32px;
-	height: 32px;
+	width: 2rem; /* 32px */
+	height: 2rem; /* 32px */
 }
 
 .container-cadastro {
@@ -156,7 +157,7 @@
 	color: #e1e1e1;
 }
 
-.background-img {
+.container-bg {
 	display: none;
 	visibility: hidden;
 }
@@ -168,10 +169,6 @@
 }
 
 @media (min-width: 1024px) {
-	.container-body {
-		min-height: 100vh;
-	}
-
 	.container-main {
 		background-image: none;
 		background-color: #0f1216;
@@ -179,10 +176,10 @@
 	}
 
 	.container-login {
-		width: 416px;
+		width: 26rem; /* 416px */
 	}
 
-	.background-img {
+	.container-bg {
 		display: block;
 		visibility: visible;
 		position: relative;
